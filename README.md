@@ -27,14 +27,17 @@ This is an interactive **bioinformatics web application** built with **Streamlit
 - Matplotlib
 
 ##👩‍🔬 Author
+
 -Shivani Sujit Navandar
 -Master's in Bioinformatics, DES Pune University
 
 
 ##👨‍🏫 Mentor
+
 -Dr. Kushagra Kashyap
 -Assistant Professor, DES Pune University
 
 
 ##📬 Feedback
+
 - Email: 3522411011@despu.edu.in
