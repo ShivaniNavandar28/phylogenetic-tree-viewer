@@ -28,14 +28,14 @@ This is an interactive **bioinformatics web application** built with **Streamlit
 
 ##👩‍🔬 Author
 
--Shivani Sujit Navandar
--Master's in Bioinformatics, DES Pune University
+- Shivani Sujit Navandar
+- Master's in Bioinformatics, DES Pune University
 
 
 ##👨‍🏫 Mentor
 
--Dr. Kushagra Kashyap
--Assistant Professor, DES Pune University
+- Dr. Kushagra Kashyap
+- Assistant Professor, DES Pune University
 
 
 ##📬 Feedback
