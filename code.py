@@ -8,7 +8,7 @@ def check_dependencies():
     required = {
         'biopython': '1.81',
         'streamlit': '1.32.0',
-        'pyvis': '0.3.2',
+        'pyvis': '0.3.1',
         'plotly': '5.18.0',
         'pandas': '2.1.4',
         'matplotlib': '3.8.2',
