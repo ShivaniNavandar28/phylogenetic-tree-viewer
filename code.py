@@ -1,4 +1,39 @@
 import streamlit as st
+import sys
+import subprocess
+import pkg_resources
+
+# Dependency check function
+def check_dependencies():
+    required = {
+        'biopython': '1.81',
+        'streamlit': '1.32.0',
+        'pyvis': '0.3.2',
+        'plotly': '5.18.0',
+        'pandas': '2.1.4',
+        'matplotlib': '3.8.2',
+        'seaborn': '0.13.0',
+        'streamlit-lottie': '0.0.7',
+        'requests': '2.31.0'
+    }
+    
+    missing = []
+    for package, version in required.items():
+        try:
+            installed = pkg_resources.get_distribution(package).version
+            if pkg_resources.parse_version(installed) < pkg_resources.parse_version(version):
+                missing.append(f"{package}>={version} (installed: {installed})")
+        except pkg_resources.DistributionNotFound:
+            missing.append(f"{package}>={version}")
+
+    if missing:
+        st.error("Missing or outdated dependencies detected!")
+        st.code("pip install " + " ".join(missing))
+        st.stop()
+
+# Check dependencies before proceeding
+check_dependencies()
+
 from Bio import Phylo
 from io import StringIO
 import streamlit.components.v1 as components
