@@ -8,3 +8,4 @@ seaborn==0.13.0
 streamlit-lottie==0.0.7
 requests==2.31.0
 numpy==1.26.2
+#
