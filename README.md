@@ -26,18 +26,18 @@ This is an interactive **bioinformatics web application** built with **Streamlit
 - Pandas
 - Matplotlib
 
-##👩‍🔬 Author
+## 👩‍🔬 Author
 
 Shivani Sujit Navandar
 Master's in Bioinformatics, DES Pune University
 
 
-##👨‍🏫 Mentor
+## 👨‍🏫 Mentor
 
 Dr. Kushagra Kashyap
 Assistant Professor, DES Pune University
 
 
-##📬 Feedback
+## 📬 Feedback
 
 Email: 3522411011@despu.edu.in
