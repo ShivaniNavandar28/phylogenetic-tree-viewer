@@ -17,7 +17,7 @@ def check_dependencies():
         'requests': '2.31.0'
     }
     
-  missing = []
+    missing = []
     for package, req_version in required.items():
         try:
             installed = version(package)
