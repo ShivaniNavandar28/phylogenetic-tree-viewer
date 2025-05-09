@@ -1,7 +1,7 @@
 import streamlit as st
 import sys
 import subprocess
-import pkg_resources
+from importlib.metadata import version, PackageNotFoundError
 
 # Dependency check function
 def check_dependencies():
@@ -13,24 +13,23 @@ def check_dependencies():
         'pandas': '2.1.4',
         'matplotlib': '3.8.2',
         'seaborn': '0.13.0',
-        'streamlit-lottie': '0.0.7',
+        'streamlit-lottie': '0.0.5',
         'requests': '2.31.0'
     }
     
-    missing = []
-    for package, version in required.items():
+  missing = []
+    for package, req_version in required.items():
         try:
-            installed = pkg_resources.get_distribution(package).version
-            if pkg_resources.parse_version(installed) < pkg_resources.parse_version(version):
-                missing.append(f"{package}>={version} (installed: {installed})")
-        except pkg_resources.DistributionNotFound:
-            missing.append(f"{package}>={version}")
+            installed = version(package)
+            if installed < req_version:
+                missing.append(f"{package}>={req_version} (installed: {installed})")
+        except PackageNotFoundError:
+            missing.append(f"{package}>={req_version}")
 
     if missing:
         st.error("Missing or outdated dependencies detected!")
-        st.code("pip install " + " ".join(missing))
+        st.code("pip install --upgrade " + " ".join(missing))
         st.stop()
-
 # Check dependencies before proceeding
 check_dependencies()
 
