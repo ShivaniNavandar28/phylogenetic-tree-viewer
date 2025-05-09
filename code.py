@@ -288,11 +288,6 @@ def show_acknowledgement():
     
     *Personal Support*  
     - My family and friends for their unwavering support and patience throughout this journey.
-
-    <div style="text-align: center; margin-top: 30px; font-style: italic; color: #555;">
-    "Knowledge grows when shared - we gratefully stand on the shoulders of those who came before us,<br>
-    and hope this tool will support those who follow in bioinformatics research."
-    </div>
     
     </div>
     """, unsafe_allow_html=True)
