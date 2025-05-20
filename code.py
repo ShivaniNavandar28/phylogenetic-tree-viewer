@@ -54,9 +54,6 @@ except (ImportError, AttributeError) as e:
     PYVIS_AVAILABLE = False
     Network = None
 
-# -------------------------------
-# Utility: Load Lottie animation from URL
-# -------------------------------
 def load_lottie_url(url):
     try:
         r = requests.get(url)
@@ -66,9 +63,6 @@ def load_lottie_url(url):
     except:
         return None
 
-# -------------------------------
-# Utility: Styled Download Button
-# -------------------------------
 def download_button(content, filename, label):
     b64 = base64.b64encode(content.encode()).decode()
     custom_css = """
@@ -93,7 +87,7 @@ def download_button(content, filename, label):
     st.markdown(href, unsafe_allow_html=True)
 
 # -------------------------------
-# Visualization with Plotly fallback
+# Visualization 
 # -------------------------------
 def visualize_with_plotly(newick_str):
     st.write("### 🌳 Tree Visualization (Plotly)")
@@ -137,7 +131,7 @@ def visualize_with_plotly(newick_str):
     st.plotly_chart(fig, use_container_width=True)
 
 # -------------------------------
-# Visualization with Pyvis (if available)
+# Visualization with Pyvis  
 # -------------------------------
 def visualize_phylo_tree(newick_str):
     if PYVIS_AVAILABLE:
@@ -172,7 +166,7 @@ def visualize_phylo_tree(newick_str):
         visualize_with_plotly(newick_str)
 
 # -------------------------------
-# Home Page (only updated "About" section)
+# Home Page 
 # -------------------------------
 def show_home():
     st.title("👩‍🔬 Welcome to the Phylogenetic Tool")
@@ -376,9 +370,9 @@ def generate_ai_insight(species, mutations):
     - Observations suggest environmental or behavioral pressures may explain this divergence
     """)
 
-# -------------------------------
-# Acknowledgements (no change)
-# -------------------------------
+# -----------------
+# Acknowledgements 
+# -----------------
 def show_acknowledgement():
     st.title("🙏 Acknowledgements")
 
@@ -427,9 +421,6 @@ def show_acknowledgement():
     </div>
     """, unsafe_allow_html=True)
 
-
-
-
 # -------------------------------
 # Main App Runner
 # -------------------------------
@@ -460,5 +451,3 @@ def run_phylo_app():
 
 if __name__ == "__main__":
     run_phylo_app()
-
-###⚠️ Lottie animation failed to load. home page animation not showing and also make Simulate Divergence tab more better and add more animation to this entire app
